@@ -1,5 +1,4 @@
-import { createServer } from "http";
-import { Server } from "socket.io";
+import { IoManager } from "./managers/IoManager";
 
-const server = createServer();
-const io = new Server();
+const io = IoManager.getIo();
+io.listen(3000);
